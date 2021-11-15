@@ -1,0 +1,17 @@
+.title-slide {
+  background-image: url(baker_logo_white.png);
+  background-size: cover;
+  background-position: bottom left;
+  background-size: 400px;
+}
+
+.inverse .remark-slide-number {
+  display: none;
+}
+
+.inverse {
+   background-image: url(baker_logo_white.png);
+   background-size: cover;
+   background-position: bottom left;
+   background-size: 200px;
+}
