@@ -15,3 +15,11 @@
    background-position: bottom left;
    background-size: 200px;
 }
+
+.inverse a {
+    color: #202121;
+}
+
+.inverse a strong {
+    color: #202121;
+}
