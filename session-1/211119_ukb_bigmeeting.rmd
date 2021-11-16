@@ -187,20 +187,21 @@ class: middle, center
 
 #### **We would like to hear your opinion**
 
-Please, scan the QR and answer an anonymous 1-min-survey to help us for future BIG Meetings.
-
+Please, scan the QR and answer an anonymous 1-min-survey to help us for future BIG Meetings
 
 <img src="tiny_cc_jdjluz.png" style="width:200px;height=200px">
 
+[**tiny.cc/jdjluz**](http://tiny.cc/jdjluz)
 
 ---
 class: center, middle, inverse
 
 # Thanks all for coming!
 
-## See you next time
+## See you next time <br> (TBD, mid-Dec)
 
+All material and information  available in <br> [**.white[bakerbioinformatics.github.io/BIG-Meetings]**](https://bakerbioinformatics.github.io/BIG-Meetings/)
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+<br><br><br>
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [R Markdown](https://rmarkdown.rstudio.com).
+Slides created with the R package [**xaringan**](https://github.com/yihui/xaringan), <br> using [**remark.js**](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [**R Markdown**](https://rmarkdown.rstudio.com)
