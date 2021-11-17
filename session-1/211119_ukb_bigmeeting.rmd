@@ -66,6 +66,28 @@ class: left, middle
 ### a community within a larger organization with a shared interest in advancing **bioinformatics** knowledge
 
 ---
+class: left, middle
+
+.pull-left[
+.right[
+### Be here now
+
+### **Ask questions** 
+
+### Everyone is welcome
+]]
+
+--
+
+.pull-right[
+### **ECRs encouraged**
+
+### Feel free to interrupt
+
+### **Share and participate**
+]
+
+---
 class: left
 
 # **Bioinformatics** Interest Group
@@ -95,7 +117,7 @@ class: center, middle, inverse
 
 # Session 1: UK Biobank
 
-## <a href="https://www.ukbiobank.ac.uk/" style="color: white; text-decoration: underline;">ukbiobank.ac.uk</a>
+## `r emo::ji("link")` <a href="https://www.ukbiobank.ac.uk/" style="color: white; text-decoration: underline;">ukbiobank.ac.uk</a>
 
 ---
 class: middle
@@ -131,17 +153,19 @@ Navigate UK Biobank publicly available data (https://biobank.ctsu.ox.ac.uk/cryst
 **54% of <br> UKB sex <br> is female**
 
 ---
-class: middle
+class: middle, center
 
 # Things can get complex
 
-- #### How many of those females have had babies?
+#### How many of those females have had babies?
 
-- #### How many males have been diagnosed with T2D?
+#### What's the average age of T1D?
 
-- #### How many medications are people with HF taking?
+#### How many males have been diagnosed with T2D?
 
-- #### ...
+#### How many medications are people with HF taking?
+
+#### ...
 
 
 ---
@@ -149,12 +173,12 @@ class: inverse, middle, center
 
 # Test case 1
 
-## Women and diabetes
+## Diabetes in UKB
 
 ---
-### Test case 1 (Women and diabetes)
+### Test case 1 (`r emo::ji("link")` [Diabetes in UKB](BIGS_ExampleByArtika_HFMedicationUse.html))
 
-<iframe frameborder=1 src="kk.html" style="position:absolute; top:15%; left:10%; width:950px; height:480px;"></iframe>
+<iframe frameborder=1 src="BIGS_ExampleByArtika_HFMedicationUse.html" style="position:absolute; top:15%; left:5%; width:1080px; height:480px;"></iframe>
 
 ---
 class: inverse, middle, center
@@ -164,9 +188,21 @@ class: inverse, middle, center
 ## Heart Failure and medication
 
 ---
-### Test case 2 (HF and medication)
+### Test case 2 (`r emo::ji("link")` [HF and medication](BIGS_ExampleByArtika_HFMedicationUse.html))
 
-<iframe frameborder=1 src="BIGS_ExampleByArtika_HFMedicationUse.html" style="position:absolute; top:15%; left:10%; width:950px; height:480px;"></iframe>
+<iframe frameborder=1 src="BIGS_ExampleByArtika_HFMedicationUse.html" style="position:absolute; top:15%; left:5%; width:1080px; height:480px;"></iframe>
+
+---
+class: inverse, middle, center
+
+# Test case 3
+
+## Atrial Fibrillation in UKB
+
+---
+### Test case 3 (`r emo::ji("link")` [Atrial Fibrillation](Example_Rcanovas_211116lifestyle.html))
+
+<iframe frameborder=1 src="Example_Rcanovas_211116lifestyle.html" style="position:absolute; top:15%; left:5%; width:1080px; height:480px;"></iframe>
 
 ---
 class: inverse, middle, center
@@ -178,7 +214,7 @@ class: inverse, middle, center
 ---
 ### Extra - Baker cluster structure
 
-<iframe frameborder=1 src="UKB_folder_structure.html" style="position:absolute; top:15%; left:10%; width:950px; height:480px;"></iframe>
+<iframe frameborder=1 src="UKB_folder_structure.html" style="position:absolute; top:15%; left:5%; width:1080px; height:480px;"></iframe>
 
 ---
 class: middle, center
