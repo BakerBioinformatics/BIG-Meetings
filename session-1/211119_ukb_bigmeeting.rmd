@@ -13,6 +13,7 @@ output:
       ratio: '16:9'
       highlightStyle: github
       highlightLines: true
+      # slideNumberFormat: "%current%"
       countIncrementalSlides: false
       
 knit: (
@@ -38,6 +39,7 @@ xaringanExtra::use_logo(
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
+library(tidyverse)
 style_mono_accent(
   base_color = "#1c5253",
   header_font_google = google_font("Josefin Sans"),
@@ -45,9 +47,12 @@ style_mono_accent(
   code_font_google   = google_font("Fira Mono")
 )
 # style_mono_light(base_color = "#23395b")
-style_duo_accent(primary_color = "#005EA7", secondary_color = "#D31245")
+style_duo_accent(primary_color = "#005EA7", secondary_color = "#D31245",
+                 header_font_google = google_font("Josefin Sans"),
+                 text_font_google   = google_font("Montserrat", "500", "500i"),
+                 code_font_google   = google_font("Fira Mono"))
 ### live update of slides
-# xaringan::inf_mr()
+# xaringan::inf_mr( )
 ```
 
 
@@ -70,7 +75,7 @@ class: left, middle
 
 .pull-left[
 .right[
-### Be here now
+### Be present
 
 ### **Ask questions** 
 
@@ -99,18 +104,22 @@ BIG meetings will be a **regular**, **flexible** and **highly interactive** foru
 Its goals are:
 
 --
-
 - Better link bioinformatics researchers around Baker
   - those in labs whose focus is bioinformatics
   - those who are the lone bioinformatican in the lab
+
 
 --
 
 - Build capacity through increased communications (e.g. a dedicated slack?) and sharing of expertise/code (e.g. via a github repo)
 
+
 --
 
 - Share and solve any problems or issues that might be common to other colleagues
+---
+
+<img src="big_artika_summary.png" style="width:1200px;height=800px">
 
 ---
 class: center, middle, inverse
@@ -153,13 +162,19 @@ Navigate UK Biobank publicly available data (https://biobank.ctsu.ox.ac.uk/cryst
 **54% of <br> UKB sex <br> is female**
 
 ---
-class: middle, center
+class: center
 
-# Things can get complex
+<br><br>
+
+# Things can get ~~complex~~ interesting
+
+--
+
+<br>
 
 #### How many of those females have had babies?
 
-#### What's the average age of T1D?
+#### What's the average age of T1D diagnoses?
 
 #### How many males have been diagnosed with T2D?
 
@@ -176,9 +191,9 @@ class: inverse, middle, center
 ## Diabetes in UKB
 
 ---
-### Test case 1 (`r emo::ji("link")` [Diabetes in UKB](BIGS_ExampleByArtika_HFMedicationUse.html))
+### Test case 1 (`r emo::ji("link")` [Diabetes in UKB](diab_bigmeeting.html))
 
-<iframe frameborder=1 src="BIGS_ExampleByArtika_HFMedicationUse.html" style="position:absolute; top:15%; left:5%; width:1080px; height:480px;"></iframe>
+<iframe frameborder=1 src="diab_bigmeeting.html" style="position:absolute; top:15%; left:5%; width:1080px; height:480px;"></iframe>
 
 ---
 class: inverse, middle, center
@@ -223,7 +238,7 @@ class: middle, center
 
 #### **We would like to hear your opinion**
 
-Please, scan the QR and answer an anonymous 1-min-survey to help us for future BIG Meetings
+Please, scan the QR code and answer an anonymous 1-min-survey to help us for future BIG Meetings
 
 <img src="tiny_cc_jdjluz.png" style="width:200px;height=200px">
 
