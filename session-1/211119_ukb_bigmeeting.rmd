@@ -13,7 +13,7 @@ output:
       ratio: '16:9'
       highlightStyle: github
       highlightLines: true
-      # slideNumberFormat: "%current%"
+      slideNumberFormat: "%current%"
       countIncrementalSlides: false
       
 knit: (
