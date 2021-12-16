@@ -55,7 +55,7 @@ For a more in-depth description of the ggplot2 packages, the following links are
 * [The R-graph gallery](https://www.r-graph-gallery.com/)
 * [GGPlot Cheat Sheet for Great Customization](http://www.sthda.com/english/articles/32-r-graphics-essentials/125-ggplot-cheat-sheet-for-great-customization/)
 * [The ggplot2: Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
-* [RStudio Cheatsheets](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-visualization.pdf)
+* [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 
 
 ```{r basic_p, child='./basic_plots.Rmd'}
