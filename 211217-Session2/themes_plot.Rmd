@@ -1,0 +1,44 @@
+
+# Themes and Labels
+
+GGplot2 allow you to modify all non-data components of your plot (i.e. titles, labels fonts, background, etc...) with the command **theme()** (check all options [here](https://ggplot2.tidyverse.org/reference/theme.html)). To modify an existing them use **theme_update()**. There are available a set of pre-defined themes such as theme_bw(), theme_minimal(), and more (check [here](https://ggplot2.tidyverse.org/reference/ggtheme.html)). 
+
+In order to change the labesl of a plot we use the **lab()** command (check [here](https://ggplot2.tidyverse.org/reference/labs.html)).
+
+## Examples {.tabset .tabset-pill}
+
+### Scatter plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(colour = Species, shape = Species), size = 3.0) +
+  scale_color_manual(values = c('#2ca25f', '#8856a7', '#fec44f')) +
+  labs(title="My new title", subtitle = "A subtitle", 
+       colour = "My Legend", x = "X axis") 
+p
+```
+
+
+### Density plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length)) + 
+  geom_density(aes(fill = Species), alpha=0.3) + 
+  scale_fill_manual(values = wes_palette("Darjeeling1")) + 
+  theme_classic()
+p
+```
+
+### Histogram
+
+```{r warning=FALSE, message=FALSE}
+p <- ggplot(data = iris, aes(x = Petal.Length)) + 
+  geom_histogram(aes(fill = Species), alpha=0.3) + 
+  scale_fill_manual(values = wes_palette("Darjeeling1")) + 
+  labs(title="This is an Histogram", tag = "TAG A", fill="Iris type") +
+  theme(plot.title = element_text(size = 12),
+        axis.text.y = element_text(colour = "blue", size = 10),
+        axis.title.x = element_text(size = rel(1.0), angle = 25, face="bold"),
+        legend.position="top")
+p
+```
