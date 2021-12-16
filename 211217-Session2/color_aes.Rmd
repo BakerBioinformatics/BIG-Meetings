@@ -1,0 +1,118 @@
+# Colour, size and shape
+
+Additionally, we can change the colour, size and shapes of the components of the data plotted.
+
+## Plain changes {.tabset .tabset-pill}
+
+It is possible to change the colour, size and shape of the whole plot.
+
+### Scatter 
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point(colour = 'blue', shape=2)
+p
+```
+
+
+### Density plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length)) + geom_density(colour = 'red', fill='#fec44f')
+p
+```
+
+### Histogram
+
+```{r warning=FALSE, message=FALSE}
+p <- ggplot(data = iris, aes(x = Petal.Length)) + geom_histogram(colour = 'red', fill='#fec44f')
+p
+```
+
+
+## Aesthetic changes {.tabset .tabset-pill}
+
+Generally, colour, size and shape are used as an aesthetic parameter to differentiate the data given another parameter.
+
+
+### Scatter plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point(aes(colour = Species, shape = Species, size = Sepal.Length))
+p
+```
+
+
+### Density plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length)) + geom_density(aes(fill = Species), alpha=0.3)
+p
+```
+
+### Histogram
+
+```{r warning=FALSE, message=FALSE}
+p <- ggplot(data = iris, aes(x = Petal.Length)) + geom_histogram(colour = 'red', aes(fill = Species), alpha=0.3)
+p
+```
+
+
+## Personalize options {.tabset .tabset-pill}
+
+When using aesthetics, it is possible to specify the values and their order to be used by each varaible. For example, we can specify the palette of colour to be used and the order in which these colours are assigned. 
+
+::: infonote
+The following commands can be used to select the values used by the respective aesthetic:
+
+* Colour
+  + scale_color_manual(values=c('color1', 'color2', ..))
+  + scale_fill_manual(values=c('color1', 'color2', ..))
+  + scale_colour_gradient(low = "blue", high = "yellow")
+
+* Shape
+  + scale_shape_manual(values=c(3, 16, ..))
+
+* Size
+  + scale_size_manual(values=c(2, 3, ..))
+  
+* Line Type
+  + scale_linetype_manual(values=c("twodash", "dotted", ..))
+:::
+
+::: remember
+There are several R package containing predefined palettes that can be used, for example: 
+
+* [RColorBrewer](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes.html)
+* [Wes Anderson](https://github.com/karthik/wesanderson)
+
+Another option is to set your colours manually. A good page to get the colours codes is [colorbrewer2](https://colorbrewer2.org/)
+:::
+
+
+
+### Scatter 
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(colour = Species, shape = Species), size = 3.0) +
+  scale_color_manual(values = c('#2ca25f', '#8856a7', '#fec44f')) +
+  scale_shape_manual(values = c(12, 23, 8)) 
+p
+```
+
+
+### Density plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length)) + 
+  geom_density(aes(fill = Species), alpha=0.3) + 
+  scale_fill_manual(values = wes_palette("Darjeeling1"))
+p
+```
+
+
+
+
+
+
+

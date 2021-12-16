@@ -1,0 +1,64 @@
+
+# Multiplots
+
+Generally in publication-quality figures you need to combine several plots, tables and figures into a single image. The [cowplot](https://wilkelab.org/cowplot/articles/index.html) package provides various features that help with creating figures, such as a set of themes, functions to align plots and arrange them into complex compound figures, and functions that make it easy to annotate plots and or mix plots with images. The function **plot_grid** allows you to easiy combine different components into a single figure.
+
+## Example {.tabset .tabset-pills}
+
+### Scatter plot 
+
+```{r}
+sp <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(colour = Species, shape = Species)) + 
+   theme(legend.position="top")
+sp
+```
+
+
+### Density plot
+
+```{r}
+dp <- ggplot(data = iris, aes(x = Sepal.Length)) + 
+  geom_density(aes(fill = Species), alpha=0.3) +
+  theme(legend.position="top")
+dp
+```
+
+### Histogram
+
+```{r warning=FALSE, message=FALSE}
+hp <- ggplot(data = iris, aes(x = Sepal.Length)) + geom_histogram(fill = 'gray')
+hp
+```
+
+### All Together
+
+```{r warning=FALSE, message=FALSE}
+p <- plot_grid(dp, hp, ncol = 1, rel_heights = c(1, 0.5))
+p <-  plot_grid(sp, p, nrow = 1, rel_widths = c(0.75, 1)) 
+p
+```
+
+
+# Save your plot
+
+There standard way to save a ggplot2 object is by opening a graphic device, printing the plot and then closing the graphic device.
+
+::: remember
+Examples of graphic devices are:
+
+* pdf("name_plot.pdf", options ..)
+* png("r-graphics.png", options ..)
+* tiff("your_plot.tiff", options ..)
+:::
+
+```{r message=FALSE, warning=FALSE, }
+png("myplot.png", width = 870, height = 550, units = "px") # Open graphic device
+print(p) #print on first page 
+# print on second page (ex. of a pdf)
+invisible(dev.off()) # Close graphic device 
+# note that the invisible command just hide the output from dev.off()
+```
+
+
+

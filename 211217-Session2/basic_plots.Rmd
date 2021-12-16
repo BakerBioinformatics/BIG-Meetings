@@ -1,0 +1,77 @@
+
+# Basic Plots
+
+## Data
+
+If you do not have your own data, you can use one of the pre-loaded R data availables.
+
+::: infonote
+* The command data() would display the available pre-loaded data
+* The command data(name-of-data) would load the data frame into your R environment
+* The command ?name-of-data would display a description of the data
+:::
+
+In this document we used the **iris** data, the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. 
+
+```{r results='asis'}
+data("iris")
+knitr::kable(head(iris), format="markdown")
+```
+
+
+## Plotting
+
+First, we need to select the **data** to be used and which fields are to be used in the plot in the aesthetic area.
+
+```{r}
+#Empty plot
+#p <- ggplot()
+#p
+#Data to be used
+#p <- ggplot(data=diamonds)
+#p
+#Indicating axis
+p <- ggplot(data=diamonds, aes(x = carat, y = price)) 
+p
+```
+
+### Geometric {.tabset .tabset-pill}
+
+Secondly, we have to choose which kind of plot we want
+
+#### Scatter plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
+p
+```
+
+#### Box plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Species, y = Petal.Length)) + geom_boxplot()
+p
+```
+
+#### Violin plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Species, y = Petal.Width)) + geom_violin()
+p
+```
+
+
+#### Density plot
+
+```{r}
+p <- ggplot(data = iris, aes(x = Sepal.Length)) + geom_density()
+p
+```
+
+#### Histogram plot
+
+```{r warning=FALSE, message=FALSE}
+p <- ggplot(data = iris, aes(x = Petal.Length)) + geom_histogram()
+p
+```
+

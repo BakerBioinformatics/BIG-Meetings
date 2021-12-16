@@ -1,0 +1,17 @@
+
+# Faceting
+
+
+GGplot2 also allows you to split a plot into multiple panels grouping the data by a given variable. This can be done wiht the **facet_wrap** or **facet_grid** command. For more information about how to use these commands check [here](https://ggplot2-book.org/facet.html)
+
+
+```{r message=FALSE, warning=FALSE}
+p <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(colour = Species, shape = Species), size = 3.0) +
+  geom_smooth(aes(color = Species, fill = Species)) + #Aids the eye in seeing patterns in the presence of overplotting
+  facet_wrap(~Species, ncol = 3, nrow = 1)+
+  scale_color_manual(values = c('#2ca25f', '#8856a7', '#fec44f')) + 
+  scale_fill_manual(values = c('#2ca25f', '#8856a7', '#fec44f')) + 
+  theme(legend.position="top")
+p
+```
